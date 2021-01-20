@@ -29,9 +29,11 @@ body, html {
     justify-content: flex-start;
     margin: 2em;
 
-    div.complete-false,
-    div.complete-false {
-        cursor: pointer;
+    div {
+        .complete-false,
+        .complete-true {
+            cursor: pointer;
+        }
     }
 
     form {

@@ -30,8 +30,12 @@ const ToDo = () => {
   };
 
   useEffect(() => {
-    setCount(list.filter(item => !item.complete).length)
+    setCount(list.filter(item => !item.complete).length); // setCount(numberOfCompleteTrueThings)
   }, [list]);
+
+  useEffect(() => {
+    document.title = `To Do List: (${count})`;
+  }, [count]);
   
   return (
     <Container>
