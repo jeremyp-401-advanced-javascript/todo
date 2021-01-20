@@ -4,6 +4,31 @@ body, html {
     padding:0;
     width: 100%;
 }
+
+.difficultyText {
+    color: #606060;
+    font-size: 85%;
+    float: right;
+}
+
+
+
+div {
+    .complete-false,
+    .complete-true {
+        cursor: pointer;
+    }
+    .toast-header {
+        span.badge {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+    }
+}
+
+// That which remains...
+
+
 .todo-details {
     display:flex;
     flex-direction:column;
@@ -27,14 +52,7 @@ body, html {
     display:flex;
     flex-direction:row;
     justify-content: flex-start;
-    margin: 2em;
-
-    div {
-        .complete-false,
-        .complete-true {
-            cursor: pointer;
-        }
-    }
+    margin: 1em;
 
     form {
 
