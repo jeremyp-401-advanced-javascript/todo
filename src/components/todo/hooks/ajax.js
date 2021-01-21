@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AppSettingsContext } from '../../contexts/AppSettings';
 
 function useAjaxCalls() {
   // TODO: Make it work
   // TODO: Separate out functions
   const [list, setList] = useState([]);
   const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
+  const appSettingsContext = useContext(AppSettingsContext);
+
+  useEffect(() => {
+    appSettingsContext.updateCount(list.filter(item => !item.complete).length); // setCount(numberOfCompleteTrueThings)
+  }, [list]);
 
   const _getTodoItems = () => {
     fetch(todoAPI, {

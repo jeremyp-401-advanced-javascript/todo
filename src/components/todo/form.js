@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Button, Card, Form, Container, Row, Col } from 'react-bootstrap';
 
 const TodoForm = (props) => {
-  const [item, setItem] = useState({ text: '', difficulty: 1, assignee: '' });
+  const [item, setItem] = useState({ text: '', difficulty: '1', assignee: '' });
 
   const _changeInput = (e) => {
     setItem({ ...item, [e.target.name]: e.target.value });
   }
 
+  // TODO: Remove this from production code
   // This runs only when the item changes
   useEffect(() => {
     console.log(`useEffect says: `, item);
